@@ -1,0 +1,88 @@
+.header
+  position: absolute
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  height: 5rem
+  width: 100%
+  border-bottom: .4rem solid $blue
+  background-color: darken($night, 3%)
+  z-index: 5
+  &-icon
+    display: none
+    position: relative
+    width: 4.5rem
+    height: 3.5rem
+    cursor: pointer
+    z-index: 15
+    span
+      display: block
+      position: absolute
+      left: 0
+      height: .4rem
+      width: 100%
+      background: $white
+      transform: rotate(0deg)
+      transition: .25s ease-in-out
+      &:nth-child(1) 
+        top: 0
+      &:nth-child(2) 
+        top: 1.3rem
+      &:nth-child(3)
+        top: 1.3rem
+      &:nth-child(4) 
+        top: 2.6rem
+  &-nav
+    &-item
+      margin-left: 4rem
+      font-size: 1.6rem
+      color: $white
+      text-transform: uppercase
+      text-decoration: none
+      z-index: 10
+  &.scroll
+    position: fixed
+    top: 0
+//Script header
+.header.header-open .header
+  &-nav
+    display: flex
+    &-item
+      line-height: 2.6rem
+  &-icon span
+    &:nth-child(1) 
+      top: 1.8rem
+      left: 50%
+      width: 0%
+    &:nth-child(2)
+      transform: rotate(45deg)
+    &:nth-child(3)
+      transform: rotate(-45deg)
+    &:nth-child(4) 
+      top: 1.8rem
+      width: 0%
+      left: 50%
+
+@media (max-width: 628px)
+  .header
+    justify-content: flex-end
+    &-icon
+      display: block
+      margin-right: 2rem  
+    &-nav
+      position: absolute
+      display: none
+      flex-direction: column
+      top: 0
+      right: 0
+      left: 0
+      margin-top: 5.4rem
+      background-color: darken($night, 9%)
+      transition: 1s
+      overflow: visible
+      &-item
+        line-height: 0
+        color: $white
+        text-transform: uppercase
+        text-decoration: none
+        z-index: 10

@@ -1,0 +1,43 @@
+.portfolio
+  padding-top: 6rem
+  padding-bottom: 6rem
+  background-color: $gray
+  &-header
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    margin-bottom: 6rem
+    span
+      height: .4rem
+      width: 7rem
+      background-color: $header
+  &-project
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    &-image
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      height: 25rem
+      width: 30rem
+      background: $gray url(../img/project.jpg) center no-repeat
+      background-size: 105%
+      cursor: pointer
+      transition: .4s
+      span
+        font-size: 3rem
+        font-weight: 700
+        color: $white
+        opacity: 0
+        transition: .4s
+      &:hover
+        box-shadow: inset 0 0 30rem 5rem darken($night, 6%)
+        opacity: .6
+        background-size: 120%
+        span
+          padding-top: 3rem
+          opacity: 1

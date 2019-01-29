@@ -1,0 +1,58 @@
+.contact
+  padding-top: 6rem
+  padding-bottom: 6rem
+  background-color: $night
+  &-header
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    margin-bottom: 6rem
+    h2
+      color: $white
+    span
+      height: .4rem
+      width: 10rem
+      background-color: $white
+    h5
+      font-size: 1.6rem
+      line-height: 4rem
+      color: $blue
+    form
+      display: flex
+      align-items: flex-end
+      justify-content: center
+      flex-direction: column
+      input, textarea, button
+        width: 50rem
+        margin-top: .5rem
+        padding: .6rem 1.8rem
+        border: none
+        font-size: 2rem
+        font-weight: 400
+        color: $white
+        background-color: darken($night, 3%)
+        outline: none
+        &::placeholder
+          font-family: $raleway
+          font-size: 1.8rem
+      textarea
+        height: 16rem
+      button
+        height: 4.4rem
+        width: 13rem
+        margin-top: 1.4rem
+        border: .2rem solid $white
+        text-transform: uppercase
+        cursor: pointer
+        transition: .6s
+        &:hover
+          background-color: $blue
+          border-color: $blue
+
+@media (max-width: 628px)
+  .contact
+    &-header
+      form
+        input, textarea
+          width: 30rem
